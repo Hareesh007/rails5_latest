@@ -10,6 +10,33 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="container">
+        <%= link_to 'Sample App','#',id:'logo'%>
+        <nav class="nav navbar-fixed-top navbar-inverse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",root_path%></li>
+            <li><%= link_to "Help",help_path%></li>
+            <li><%= link_to "Login",'#'%></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+      <footer class="footer">
+        <small>
+          The <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
+          by <a href="http://www.michaelhartl.com/">Michael Hartl</a>
+        </small>
+        <nav>
+          <ul>
+            <li><%= link_to "About",   about_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+            <li><a href="http://news.railstutorial.org/">News</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>
